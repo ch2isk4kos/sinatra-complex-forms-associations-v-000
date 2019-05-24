@@ -50,9 +50,14 @@ pets.
 
 Since we've provided you with much of the code for this project, take a few
 moments to go through the provided files and familiarize yourself with the app.
-Note that an owner has a name and has many pets and a pet has a name and belongs
-to an owner. Note that we have two separate controllers, one for pets and one
-for owners, each of which inherit from the main application controller. Note
+
+*Note* that an @owner has a name and has_many @pets and a @pet has a name and
+belongs_to an @owner.
+
+*Note* that we have two separate controllers, one for pets and one
+for owners, each of which inherit from the main application controller.
+
+*Note*
 that each controller has a set of routes that enable the basic CRUD actions
 (except for delete –– we don't really care about deleting for the purposes of
 this exercise).
@@ -65,12 +70,18 @@ started.
 
 The phrase 'seeding the database' refers to the practice of filling up your
 database with some dummy data. As we develop our apps, it is essential that we
-have some data to work with. Otherwise, we won't be able to tell if our app is
-working or try out the actions and features that we are building. Sinatra makes
-it easy for us to seed our database by providing us with something called a seed
-file. This file should be placed in the `db` directory, `db/seeds.rb`. The seed
-file is where you can write code that creates and saves instances of your
-models.
+have some data to work with.
+
+Otherwise, we won't be able to tell if our app is
+working or try out the actions and features that we are building.
+
+Sinatra makes it easy for us to seed our database by providing us with
+something called a seed file.
+
+This file should be placed in the `db` directory, `db/seeds.rb`.
+
+The seed file is where you can write code that creates and saves instances of
+your models.
 
 When you run the seed task provided by Sinatra and Rake, `rake db:seed`, the
 code in the seed file will be executed, inserting some sample data into your
@@ -497,4 +508,3 @@ is created it would override any existing owner that is selected.
 Make sure you run the tests to check your work.
 
 <p class='util--hide'>View <a href='https://learn.co/lessons/sinatra-complex-forms-associations'>Sinatra Complex Forms Associations</a> on Learn.co and start learning to code for free.</p>
-

@@ -1,13 +1,13 @@
 <h1>Create a new Owner</h1>
 
 <form action="/owners" method="POST">
-  <label>Name:</label>
+    <h3>Owner Name <input type="text" name="owner[name]" id="owner_name"></h3>
+    <h3>Pet Name <input type="text" name="pet[name]" id="pet_name"> or choose:</h3>
 
-  <br>
+    <% Pet.all.each do |pet| %>
+        <input type="checkbox" name="owner[pet_ids][]" id="<%= pet.name %>" value="<%= pet.id %>"><%= pet.name %></input>
+    <% end %>
 
-  <input type="text" name="owner[name]">
-
-  <br>
-
-  <input type="submit" value="Create Owner">
+    <br></br>
+    <input type="submit" value="Create Owner">
 </form>
